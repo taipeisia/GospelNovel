@@ -1,35 +1,39 @@
+body{
+  margin: 0px;
+}
+
 .wrapper{
-  margin: 5vw;
-  margin-bottom: 50px;
+  margin-left: 5vw;
+  margin-right: 5vw;
   height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   text-align: center;
 }
 
-.book {
-  width: 200px;
-  text-align: center;
-  float: left;
+.bookAll{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
+.book{
+  margin: 2vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 .cover img {
-  width: 100px;
-  height: 153px;
+  width: 10vw;
   background-color: #FFF;
   padding: 2px;
   border: 1px solid #CCC;
 }
 
-.clear{
-  clear: both;
-  float: none;
-}
-
 .footer {
-	clear: both;
 	border-top: 1px solid #CCC;
 	color: #999;
 	background: #ececec;

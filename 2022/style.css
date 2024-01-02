@@ -10,6 +10,7 @@ header
   padding-top: 5px;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
+  background: #DDDDDD;
   width: 94vw;
   height: 30px;
   line-height: 30px;
@@ -137,16 +138,27 @@ footer
   padding-bottom: 20px;
   height: 25px;
   background: #DDDDDD;
+  display: flex;
+  justify-content: center;
 }
-
 .lastChapter
 {
   width: 20vw;
   height: 30px;
-  margin-left: 15vw;
+  margin-left: 5vw;
   margin-right: 5vw;
   padding-top: 5px;
-  float: left;
+  text-align: center;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+.content
+{
+  width: 20vw;
+  height: 30px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 5px;
   text-align: center;
   background: #FFFFFF;
   cursor: pointer;
@@ -156,9 +168,8 @@ footer
   width: 20vw;
   height: 30px;
   margin-left: 5vw;
-  margin-right: 15vw;
+  margin-right: 5vw;
   padding-top: 5px;
-  float: right;
   text-align: center;
   background: #FFFFFF;
   cursor: pointer;

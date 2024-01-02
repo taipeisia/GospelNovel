@@ -30,7 +30,7 @@ a {
 	margin: 0px 0px 0px 0px;
 	padding: 0 12px;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 25px;
 	line-height: 40px;
 	border: 1px solid #FFF;
 	border-bottom: 1px solid #e3dddc;
@@ -88,53 +88,48 @@ a {
 
 .muLuAll{
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-evenly;
 }
 .muLu{
-	padding: 10px;
-	padding-right: 15px;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 .chapter{
-	margin-top: 4vw;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
-.muLu p{
+.chapter p{
 	margin: 10px;
 }
-.muLu a:hover{
+.chapter a:hover{
     text-decoration: underline;
 }
-
-.picZhi, .picHeng{
-	text-align: center;
-}
-.picZhi img, .picHeng img {
+.picZhi img {
 	background-color: #FFF;
 	padding: 2px;
 	border: 1px solid #CCC;
-	margin: 3vw;
+}
+.picHeng img {
+	background-color: #FFF;
+	padding: 2px;
+	border: 1px solid #CCC;
 }
 /*手機*/
 @media screen and (max-width: 1024px) {
 	.pic_txt_list .pic img {
 		width: 40vw;
 	}
-
-	.muLu p.jingWen{
-		text-align: right;
-	}
-
-	.picZhi, .picHeng{
-		min-width: 45vw;
-	}
-	.picHeng img{
-		width: 40vw;
-	}
-	.picZhi img{
+	.picZhi img {
 		width: 30vw;
+	}
+	.picHeng img {
+		width: 40vw;
 	}
 }
 /*電腦*/
@@ -145,18 +140,10 @@ a {
 	.pic_txt_list .pic img {
 		width: 20vw;
 	}
-
-	.muLu p.jingWen{
-		text-align: center;
-	}
-
-	.picZhi, .picHeng{
-		min-width: 30vw;
-	}
-	.picHeng img{
-		width: 25vw;
-	}
-	.picZhi img{
+	.picZhi img {
 		width: 15vw;
+	}
+	.picHeng img {
+		width: 20vw;
 	}
 }

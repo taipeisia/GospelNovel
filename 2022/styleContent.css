@@ -42,60 +42,34 @@ a{
 .title a:hover{
   text-decoration: underline;
 }
-ul.list {
+
+.pic_txt_list{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+.pic_txt_list .pic{
+	margin: 2vw;
+}
+.pic_txt_list .pic img {
+	background-color: #FFF;
+	padding: 2px;
+	border: 1px solid #CCC;
+}
+.wenZi{
+	margin-top: 3vw;
+}
+.pic_txt_list p {
 	margin: 0px;
 	padding: 0px;
-}
-ul.list li.c3 {
-  width: 50%;
-  text-align: left;
-  position: relative;
-  margin: 0px;
-  list-style: none;
-  padding: 0px;
-  font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-ul.list li.c4 {
-  width: 49%;
-  float: right;
-  position: relative;
-  margin: 0px;
-  list-style: none;
-  padding: 0px;
-  font-size: 14px;
-  white-space: nowrap;
-	overflow: hidden;
-}
-ul.list li a {
-	margin: 0px;
-	display: block;
-	padding: 12px 20px;
-	border-bottom: 1px solid #eeeeee;
-	color: #262626;
-	text-decoration: none;
-}
-.pic_txt_list .picCover {
-	float: left;
-	display: block;
-}
-.pic_txt_list h3 {
-	margin: 0px;
-	padding: 0px;
-	margin-left: 65px;
-	height: 28px;
-	line-height: 28px;
-	font-size: 18px;
-	font-weight: 400;
-	text-shadow: none;
-	color: #333;
+	color: #666;
+	line-height: 22px;
 }
 .pic_txt_list p span {
 	color: #666;
-	font-size: 16px;
 	margin-right: 2px;
 }
+
 .footer {
 	clear: both;
 	border-top: 1px solid #CCC;
@@ -116,102 +90,42 @@ ul.list li a {
 	border: 1px solid #ccc;
 	margin: 1px;
 	background-color: #FFF;
-	height: 1385px;
 }
 
+.muLuAll{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
 .muLu {
-	padding: 10px;
-	padding-right: 15px;
-	height: 200px;
+	margin: 2vw;
 	text-align: center;
-	width: 47.5%;
-	float: left;
-	border-bottom: 5px solid #eeeeee;
+	display: flex;
+	flex-direction: column;
 }
 .muLu p {
 	margin: 10px;
 }
 .muLu a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.picZero img {
-	width: 100px;
-	height: 113px;
+.pic img {
 	background-color: #FFF;
 	padding: 2px;
-	margin-top: 30px;
-	border: 1px solid #CCC;
-}
-.picOne img, .picTwo img {
-	width: 100px;
-	height: 158px;
-	background-color: #FFF;
-	padding: 2px;
-	border: 1px solid #CCC;
-}
-.picThree img, .picFour img, .picSix img, .picSeven img, .picNine img, .picTen img {
-	width: 100px;
-	height: 100px;
-	background-color: #FFF;
-	padding: 2px;
-	margin-top: 35px;
-	border: 1px solid #CCC;
-}
-.picFive img {
-	width: 200px;
-	height: 80px;
-	background-color: #FFF;
-	padding: 2px;
-	margin-top: 40px;
-	border: 1px solid #CCC;
-}
-.picEight img {
-	width: 100px;
-	height: 153px;
-	background-color: #FFF;
-	padding: 2px;
-	margin-top: 7px;
 	border: 1px solid #CCC;
 }
 
 /*手機*/
 @media screen and (max-width: 1024px) {
-	.muLu {
-		width: 96.7%;
+	.pic_txt_list .pic img {
+		width: 40vw;
 	}
-	.Content {
-		height: 2500px;
-	}
-	.wenZi {
-		margin-top: 5px;
-	}
-	.pic_txt_list {
-		margin: 0px;
-		display: block;
-		padding: 10px 0px 5px 10px;
-		height: 160px;
-		border-bottom: 1px solid #eeeeee;
-		overflow: hidden;
-		position: relative;
-	}
-	.pic_txt_list .picCover img {
-		width: 100px;
-		height: 153px;
-		background-color: #FFF;
-		padding: 2px;
-		border: 1px solid #CCC;
-	}
-	.pic_txt_list p {
-		margin: 0px;
-		padding: 0px;
-		margin-left: 120px;
-		color: #666;
-		font-size: 14px;
-		line-height: 22px;
-	}
-	.muLu p.jingWen{
-		text-align: right;
+
+	.pic img{
+		width: 40vw;
 	}
 }
 /*電腦*/
@@ -219,34 +133,11 @@ ul.list li a {
 	.row {
 		width: 1024px;
 	}
-	.wenZi{
-		margin-top: 15px;
+	.pic_txt_list .pic img {
+		width: 20vw;
 	}
-	.pic_txt_list {
-		margin: 0px;
-		display: block;
-		padding: 10px 0px 5px 10px;
-		height: 315px;
-		border-bottom: 1px solid #eeeeee;
-		overflow: hidden;
-		position: relative;
-	}
-	.pic_txt_list .picCover img {
-		width: 200px;
-		height: 306px;
-		background-color: #FFF;
-		padding: 2px;
-		border: 1px solid #CCC;
-	}
-	.pic_txt_list p {
-		margin: 0px;
-		padding: 0px;
-		margin-left: 220px;
-		color: #666;
-		font-size: 16px;
-		line-height: 22px;
-	}
-	.muLu p.jingWen{
-		text-align: center;
+
+	.pic img{
+		width: 15vw;
 	}
 }
