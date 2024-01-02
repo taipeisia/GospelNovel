@@ -19,6 +19,7 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
 }
 .book{
   margin: 2vw;
@@ -27,7 +28,6 @@ body{
   flex-direction: column;
 }
 .cover img {
-  width: 10vw;
   background-color: #FFF;
   padding: 2px;
   border: 1px solid #CCC;
@@ -56,4 +56,16 @@ body{
 }
 .tc {
 	text-align: center;
+}
+
+@media screen and (min-width: 1024px){
+  .cover img {
+    width: 10vw;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .cover img {
+    width: 50vw;
+  }
 }
