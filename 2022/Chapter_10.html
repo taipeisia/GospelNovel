@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <title>問題與討論</title>
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="background">背景
+        <button class="white"></button>
+        <button class="green"></button>
+        <button class="blue"></button>
+        <button class="gray"></button>
+        <button class="black"></button>
+      </div>
+      <div class="fontSize">文字
+        <button class="big">+</button>
+        <button class="small">-</button>
+      </div>
+    </header>
+
+    <article id="article">
+      <div class="title">
+        <hr style="margin-top: 3vw;" class="weakLR">
+        <strong>問題與討論</strong>
+        <hr style="margin-top: 3vw;" class="weakLR">
+      </div>
+
+      <div class="story" id="story">
+        <div class="picZhi"><img src="./Image/Ch10.webp" alt="PictureNotFound" loading="lazy"></div>
+
+        <ol>
+        	<li>
+        	   <div class="part">以利雅薩在遭受苦待時，曾經產生對上帝的怨懟之心。但在實際經歷上帝的保守之後，他深刻的明瞭到上帝的恩典與慈愛永遠不會離開他。在你的生活中，是否也有過這樣的經驗呢？</div>
+        	</li>
+          <br>
+        	<li>
+        	   <div class="part">在故事中，不斷被人們提起、思想的「庇護城」，它設立的目的有那些？</div>
+        	</li>
+          <br>
+        	<li>
+        	   <div class="part">當你遇到日常的人際生活中，他人的無心之錯（無心之話），你的第一反應通常是什麼？內心又有那些情緒？看完「庇護城」的故事以後，你覺得在面對他人的「無心之錯」，自己可以有怎樣的調整與改變？</div>
+        	</li>
+          <br>
+          <li>
+        	   <div class="part">「庇護城」保護了無心犯錯的人，也避免讓心懷怨懟的人有再次犯錯的機會。這樣的概念對你來說，有什麼啟發？</div>
+        	</li>
+        </ol>
+      </div>
+    </article>
+
+    <footer id="footer">
+      <div class="lastChapter" id="lastChapter" onclick="location.href='./Chapter_9.html';">上一章</div>
+      <div class="nextChapter" id="nextChapter" onclick="location.href='./Content.html';" style="visibility: hidden;">下一章</div>
+    </footer>
+</body>
+
+<script src="main.js" defer></script>
+
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>

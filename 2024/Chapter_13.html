@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <title>誰來自安塔基亞？</title>
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="background">背景
+        <button class="white"></button>
+        <button class="green"></button>
+        <button class="blue"></button>
+        <button class="gray"></button>
+        <button class="black"></button>
+      </div>
+      <div class="fontSize">文字
+        <button class="big">+</button>
+        <button class="small">-</button>
+      </div>
+    </header>
+
+    <article id="article">
+      <div class="title">
+        <hr style="margin-bottom: 3vw;" class="weakLR">
+        <strong>番外</strong>
+        <hr style="margin-top: 3vw;" class="weakLR">
+      </div>
+
+      <div class="story" id="story">
+
+        <div class="character">
+          <div class="picOther"><img src="./Image/Other_IXOYE.webp" alt="PictureNotFound" loading="lazy"></div>
+          <div class="people">
+            <hr class="weakR">
+            <div class="name">以弗所遺址 魚的記號石頭</div>
+            <hr class="weakR">
+            <div class="discription"></div>
+          </div>
+        </div>
+        <div class="character">
+          <div class="picOther"><img src="./Image/Other_JiaPaDouJia.webp" alt="PictureNotFound" loading="lazy"></div>
+          <div class="people">
+            <hr class="weakR">
+            <div class="name">加帕多家</div>
+            <hr class="weakR">
+            <div class="discription"></div>
+          </div>
+        </div>
+        <div class="character">
+          <div class="picOther"><img src="./Image/Other_GeLeiMiGu.webp" alt="PictureNotFound" loading="lazy"></div>
+          <div class="people">
+            <hr class="weakR">
+            <div class="name">葛雷米谷露天修道院</div>
+            <hr class="weakR">
+            <div class="discription"></div>
+          </div>
+        </div>
+        <div class="character">
+          <div class="picOther"><img src="./Image/Other_AppleTree.webp" alt="PictureNotFound" loading="lazy"></div>
+          <div class="people">
+            <hr class="weakR">
+            <div class="name">格雷米谷露天修道院路上的蘋果樹</div>
+            <hr class="weakR">
+            <div class="discription"></div>
+          </div>
+        </div>
+
+        <div style="text-align: right; font-size: 15px">（攝自林月娥）</div>
+      </div>
+    </article>
+
+    <footer id="footer">
+      <div class="lastChapter" id="lastChapter" onclick="location.href='./Chapter_12.html';">上一章</div>
+      <div class="nextChapter" id="nextChapter" onclick="location.href='./Chapter_13.html';" style="visibility: hidden;">下一章</div>
+    </footer>
+</body>
+
+<script src="main.js" defer></script>
+
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>

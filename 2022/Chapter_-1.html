@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <title>人物簡介</title>
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="background">背景
+        <button class="white"></button>
+        <button class="green"></button>
+        <button class="blue"></button>
+        <button class="gray"></button>
+        <button class="black"></button>
+      </div>
+      <div class="fontSize">文字
+        <button class="big">+</button>
+        <button class="small">-</button>
+      </div>
+    </header>
+
+    <article id="article">
+      <div class="title">
+        <hr style="margin-top: 3vw;" class="weakLR">
+        <strong>人物簡介</strong>
+        <hr style="margin-top: 3vw;" class="weakLR">
+      </div>
+
+      <div class="story" id="story">
+        <div class="picZhi"><img src="./Image/Ch10.webp" alt="PictureNotFound" loading="lazy"></div>
+
+        <div><strong>以利雅薩 男（希伯來文意思：神已經幫助）</strong></div>
+        <div>&nbsp;主角，磨石小家庭中的兒子。</div>
+        <br>
+        <div><strong>吉安娜 女（希伯來文意思：神是慈悲的）</strong></div>
+        <div>&nbsp;寡婦，磨石小家庭中的母親。</div>
+        <br>
+        <div><strong>葉迪爾 男（希伯來文意思：朋友）</strong></div>
+        <div>&nbsp;以利雅薩的朋友。</div>
+        <br>
+        <div><strong>艾維 男（希伯來文意思：我的父親）</strong></div>
+        <div>&nbsp;葉迪爾的父親。因為意外，導致一隻腳受傷，而無法下田工作。</div>
+        <br>
+        <div><strong>阿撒爾 男（希伯來文意思：富有）</strong></div>
+        <div>&nbsp;伯利恆的大財主。</div>
+        <br>
+        <div><strong>伊特羅 男（希伯來文意思：財富）</strong></div>
+        <div>&nbsp;阿撒爾家的大兒子，被阿撒爾私自設立為祭司，遺傳爸爸的跋扈。</div>
+        <br>
+        <div><strong>奧菲爾 男（希伯來文意思：黃金）</strong></div>
+        <div>&nbsp;阿撒爾家的二兒子，小心眼，陰險狡詐。</div>
+        <br>
+        <div><strong>艾迪爾 男（希伯來文意思：上帝的裝飾品）</strong></div>
+        <div>&nbsp;阿撒爾家的小兒子，備受一家人寵愛，喜歡揮霍錢財，沒錢就去勒索爸爸的佃農。</div>
+        <br>
+        <div><strong>吉迪恩 男（希伯來文意思：強大的戰士）</strong></div>
+        <div>&nbsp;阿撒爾家的工頭。</div>
+        <br>
+        <div><strong>以塔納 男（希伯來文意思：強壯）</strong></div>
+        <div>&nbsp;在阿撒爾家的田地裡工作，經常帶頭欺負以利雅薩。</div>
+      </div>
+    </article>
+
+    <footer id="footer">
+      <div class="lastChapter" id="lastChapter" onclick="location.href='./Content.html';" style="visibility: hidden;">上一章</div>
+      <div class="nextChapter" id="nextChapter" onclick="location.href='./Chapter_0.html';">下一章</div>
+    </footer>
+</body>
+
+<script src="main.js" defer></script>
+
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>

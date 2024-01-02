@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <title>第10章 新的開端</title>
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="background">背景
+        <button class="white"></button>
+        <button class="green"></button>
+        <button class="blue"></button>
+        <button class="gray"></button>
+        <button class="black"></button>
+      </div>
+      <div class="fontSize">文字
+        <button class="big">+</button>
+        <button class="small">-</button>
+      </div>
+    </header>
+
+    <article id="article">
+      <div class="title">
+        <hr style="margin-top: 3vw;" class="weakLR">
+        <strong>第10章 新的開端</strong>
+        <hr style="margin-top: 3vw;" class="weakLR">
+      </div>
+
+      <div class="story" id="story">
+
+        <div class="picZhi"><img src="./Image/Ch10.webp" alt="PictureNotFound" loading="lazy"></div>
+
+        <div class="part">　　小樹感到有人將自己從地上扶起，搖搖晃晃之間，視線慢慢恢復、清晰。揉揉雙眼，面前還是舊公寓的大門。那，剛剛是誰？「社長大人，你也太不小心了吧！」背後的聲音調侃打趣道。「小豬？你怎麼？」小樹轉頭一看，沒想到班上同學竟在地上幫自己收拾散落一地的課本。小豬是小樹的同班同學，只是一直沒怎麼打過交道。</div>
+        <div class="part">　　「齁，兩年了耶，你不知道我們是鄰居嗎？剛剛還坐同一台公車好嗎？真是的。」</div>
+        <div class="part">　　「啊，這，不，我都不知道耶，天啊。」小樹訥訥無言，下意識地搓揉雙手，有些緊張。</div>
+        <div class="part">　　「好啦，這不怪你，誰叫你無論走路還是搭車，耳機都戴好戴滿，是說降噪也真的厲害，我好幾次叫你，都聽不見。」</div>
+        <div class="part">　　「不是說不怪我嗎？」小樹心裡暗想，但還是不好意思地笑了。「啊，真的很感謝你耶，不然我剛剛差點回不來了！」小樹一臉真誠的望向小豬。</div>
+        <div class="part">　　「回不來？」小豬挑眉。</div>
+        <div class="part">　　小樹下意識摀住了嘴，接著放鬆開來，燦然一笑：「那是個很長的故事，如果你有興趣的話，我再慢慢說給你聽。」看著小豬一臉問號，小樹臉上不禁浮出一抹笑意。</div>
+        <div class="part">　　回首望向驟雨中的台北市，小樹看到從前不曾注意到的風景<!--寒流來的台北市⋯⋯-->，他有預感他的生活將不再一樣。</div>
+
+      </div>
+    </article>
+
+    <footer id="footer">
+      <div class="lastChapter" id="lastChapter" onclick="location.href='./Chapter_9.html';">上一章</div>
+      <div class="nextChapter" id="nextChapter" onclick="location.href='./Content.html';" style="visibility: hidden;">下一章</div>
+    </footer>
+</body>
+
+<script src="main.js" defer></script>
+
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>
