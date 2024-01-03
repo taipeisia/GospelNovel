@@ -162,36 +162,14 @@ footer
   display: flex;
   justify-content: center;
 }
-.lastChapter
-{
+.lastChapter, .content, .nextChapter{
   width: 20vw;
   height: 30px;
   margin-left: 5vw;
   margin-right: 5vw;
   padding-top: 5px;
   text-align: center;
-  background: #FFFFFF;
-  cursor: pointer;
-}
-.content
-{
-  width: 20vw;
-  height: 30px;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  padding-top: 5px;
-  text-align: center;
-  background: #FFFFFF;
-  cursor: pointer;
-}
-.nextChapter
-{
-  width: 20vw;
-  height: 30px;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  padding-top: 5px;
-  text-align: center;
+  line-height: 25px;
   background: #FFFFFF;
   cursor: pointer;
 }
@@ -206,6 +184,9 @@ footer
   }
   .picZhi img{
     width: 25vw;
+  }
+  .picOther img{
+    width: 40vw;
   }
 
   .character{
@@ -222,6 +203,9 @@ footer
     text-align: center;
   }
   .picZhi img{
+    width: 80vw;
+  }
+  .picOther img{
     width: 80vw;
   }
 
