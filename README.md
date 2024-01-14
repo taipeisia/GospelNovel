@@ -8,4 +8,4 @@
 
 
 
-Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)  ![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1) ![image](https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1) ![image](https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1) ![image](https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1)
+Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)  ![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1 =22x22) ![image](https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1 =22x22) ![image](https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1 =22x22) ![image](https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1 =22x22)
