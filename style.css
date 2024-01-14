@@ -1,5 +1,8 @@
 body{
   margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper{
@@ -7,6 +10,7 @@ body{
   margin-right: 5vw;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .title {
@@ -36,11 +40,9 @@ body{
 	border-top: 1px solid #CCC;
 	color: #999;
 	background: #ececec;
-	padding: 0px;
+	padding: 15px;
 	margin: 0px;
-  position: fixed;
   bottom: 0;
-  width: 100%;
 }
 .footer a {
 	color: #666;
@@ -49,9 +51,10 @@ body{
 .footer a:hover {
 	text-decoration: underline;
 }
-.footer p {
-	padding: 15px;
-	margin: 0px;
+.cc {
+	padding: 10px;
+	color: #666;
+	text-align: center;
 }
 .tc {
 	text-align: center;
