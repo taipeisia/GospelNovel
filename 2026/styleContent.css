@@ -1,0 +1,230 @@
+/* ===== 基本 ===== */
+* { box-sizing: border-box; }
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background: #fafafa;
+	color: #666;
+	font-size: 16px; /* 基準字級 */
+	line-height: 1.5;
+}
+
+.cc {
+	padding: 10px;
+	color: #666;
+	text-align: center;
+}
+
+.pt5 { padding-top: 5px; }
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+.row { margin: 0 auto; }
+
+.wrapper {
+	background-color: #e7e7e7;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.box {
+	border: 1px solid #ccc;
+	margin: 1px;
+	background-color: #FFF;
+}
+
+/* ===== 標題 ===== */
+.title {
+	margin: 0;
+	padding: 0 12px;
+	font-weight: normal;
+	font-size: clamp(16px, 1.6vw, 20px);
+	line-height: clamp(34px, 3.2vw, 40px);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #e3dddc;
+	background-color: #f7f7f7;
+}
+.title a { color: #000; }
+.title a:hover { text-decoration: underline; }
+
+/* ===== 封面資訊區（圖＋文字） ===== */
+.pic_txt_list{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: clamp(10px, 2vw, 18px);
+}
+
+.pic_txt_list .pic{
+	margin: 0;
+	padding: clamp(10px, 2vw, 18px);
+}
+
+.pic_txt_list .pic img {
+	display: block;
+	background-color: #FFF;
+	padding: 2px;
+	border: 1px solid #CCC;
+
+	/* 關鍵：穩定自適應，不再用 20vw / 40vw 這種會爆的比例 */
+	width: clamp(160px, 28vw, 320px);
+	height: auto;
+	max-width: 100%;
+}
+
+.wenZi{
+	margin-top: clamp(8px, 2vw, 18px);
+}
+
+.pic_txt_list p {
+	margin: 0;
+	padding: 0;
+	color: #666;
+	line-height: 1.55;
+	font-size: clamp(14px, 1.3vw, 16px);
+}
+.pic_txt_list p span {
+	color: #666;
+	margin-right: 2px;
+}
+
+/* ===== 目錄區 ===== */
+.muLuAll{
+	display: flex;
+	flex-direction: column;
+}
+
+.muLu{
+	padding: 10px 15px 10px 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: clamp(6px, 1.5vw, 14px);
+}
+
+.chapter{
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+
+.muLu p{
+	margin: 10px;
+	font-size: clamp(14px, 1.35vw, 16px);
+	line-height: 1.6;
+}
+.muLu p.story{
+	text-align: left;
+}
+.muLu p.jingWen{
+	text-align: right;
+	font-size: clamp(13px, 1.2vw, 15px);
+	opacity: 0.95;
+}
+
+.muLu a:hover{ text-decoration: underline; }
+
+/* ===== 圖片區（章節封面/符號/老約翰） ===== */
+.pic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: clamp(220px, 30%, 360px);
+  flex: 0 0 auto;
+}
+
+
+.picZhi, .picChurch, .picSymbol{
+	text-align: center;
+	flex: 0 0 auto;
+}
+
+.picZhi img, .picChurch img, .picSymbol img{
+	display: block;
+	background-color: #FFF;
+	padding: 2px;
+	border: 1px solid #CCC;
+	margin: clamp(8px, 2vw, 18px) auto;
+	height: auto;
+	max-width: 100%;
+}
+
+/* 個別圖片尺寸（穩定比例） */
+.picZhi { min-width: clamp(120px, 30vw, 240px); }
+.picChurch, .picSymbol { min-width: clamp(90px, 22vw, 200px); }
+
+.picZhi img { width: clamp(100px, 18vw, 180px); }
+.picChurch img, .picSymbol img { width: clamp(90px, 16vw, 160px); }
+
+/* ===== Footer ===== */
+.footer {
+	clear: both;
+	border-top: 1px solid #CCC;
+	color: #999;
+	background: #ececec;
+	padding: 15px;
+	margin: 0;
+}
+.footer p { padding: 15px; margin: 0; }
+.footer a:hover { text-decoration: underline; }
+
+/* ===== 手機 ===== */
+@media screen and (max-width: 640px) {
+  .muLu{
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .muLu .pic{
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+		justify-content: space-around;
+  }
+
+  .muLu .chapter{
+    width: 100%;
+  }
+  .muLu p{
+    margin: 8px 10px;
+  }
+	.muLu p.story{
+    text-align: center;
+  }
+  .muLu p.jingWen{
+    text-align: right;
+  }
+
+	.picZhi img{
+		width: clamp(110px, 35vw, 160px);
+	}
+	.picChurch img, .picSymbol img{
+		width: clamp(95px, 30vw, 140px);
+	}
+
+  .pic_txt_list{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wenZi{
+    margin-top: 0;
+    padding: 0 12px 12px 12px;
+  }
+}
+
+/* ===== 電腦 ===== */
+@media screen and (min-width: 640px) {
+	.pic{
+		width: 40vw;
+	}
+}
