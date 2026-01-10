@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link href="./styleCalculator.css" rel="stylesheet" type="text/css">
+
+	<title>74.7 Overcomers 計算器</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>74.7 Overcomers－啟示錄7教會</h1>
+    <h1>簡易版桌遊 計分表</h1>
+
+    <div class="toolbar">
+      <div class="left">
+        <button id="btnCalcAll" type="button">全部結算</button>
+        <button id="btnClear" type="button">清除全部</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:220px;">教會</th>
+            <th style="width:240px;">是否翻到特殊牌</th>
+            <th style="width:110px;">福音</th>
+            <th style="width:110px;">追殺</th>
+            <th style="width:110px;">試煉</th>
+            <th style="width:110px;">放逐</th>
+            <th style="width:120px;">結算</th>
+            <th style="width:140px;">判定</th>
+            <th style="width:140px; text-align:right;">分數</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <div class="totalbar">
+      <div>
+        <div class="hint">七輪總分</div>
+        <div class="total" id="totalScore">0</div>
+      </div>
+    </div>
+
+    <p class="hint" style="margin-top:12px; font-size:20px; text-align:center;">
+      點擊「<a href="./Content.html" target="_blank">故事文本</a>」閱讀
+    </p>
+  </div>
+
+
+
+	<div class="footer">
+		<div class="cc">
+			<a href="https://www.instagram.com/taipeisia/" target="_blank"><strong>飛躍青年傳愛中心</strong></a>
+		</div>
+		<div class="cc">
+			Licensed under
+			<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
+				<img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+				<img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+				<img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1">
+				<img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
+		</div>
+	</div>
+</body>
+
+<script src="./mainCalculator.js" defer></script>
+
+</html>

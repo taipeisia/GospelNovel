@@ -6,7 +6,7 @@ body {
 	padding: 0;
 	background: #fafafa;
 	color: #666;
-	font-size: 16px; /* 基準字級 */
+	font-size: 16px;
 	line-height: 1.5;
 }
 
@@ -15,8 +15,6 @@ body {
 	color: #666;
 	text-align: center;
 }
-
-.pt5 { padding-top: 5px; }
 
 a {
 	color: #666;
@@ -70,7 +68,6 @@ a {
 	padding: 2px;
 	border: 1px solid #CCC;
 
-	/* 關鍵：穩定自適應，不再用 20vw / 40vw 這種會爆的比例 */
 	width: clamp(160px, 28vw, 320px);
 	height: auto;
 	max-width: 100%;
