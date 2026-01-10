@@ -159,9 +159,6 @@ footer
     padding-left: 30px;
     float: right;
   }
-  .picZhi{
-
-  }
   .picZhi img{
     width: 25vw;
   }
@@ -174,5 +171,9 @@ footer
   }
   .picZhi img{
     width: 80vw;
+  }
+
+  .lastChapter, .content, .nextChapter{
+    font-size: 13px;
   }
 }
