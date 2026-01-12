@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link href="./styleRule.css" rel="stylesheet" type="text/css">
+
+	<title>74.7 Overcomers 陣營對抗遊戲規則</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1 class="title">74.7 Overcomers－啟示錄7教會</h1>
+      <p class="subtitle">卡牌陣營對抗遊戲（建議人數：7–14）</p>
+      <div class="meta">
+        桌遊設計團隊<br>
+        文本：岑明雲、劉景明、鄭伊珊<br>
+        繪圖：王佳宣、孫祐予<br>
+        遊戲設計：王示恩、岑明雲<br>
+        企劃：林月娥<br>
+        版權所屬：北區飛躍青年傳愛中心<br>
+        桌遊名稱： 74.7 Overcomers－啟示錄7教會<br>
+        出版時間：2026北中門
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="toc" aria-label="目錄">
+        <h3>目錄</h3>
+        <a href="#sec-goal">遊戲目標</a>
+        <a href="#sec-components">遊戲配件</a>
+        <a href="#sec-players">遊戲人數</a>
+        <a href="#sec-setup">遊戲開始前準備</a>
+        <a href="#sec-progress">遊戲進行時</a>
+        <a href="#sec-flow">回合流程（共五個階段）</a>
+        <a href="#sec-died">角色死亡</a>
+        <a href="#sec-end">遊戲結束</a>
+        <a href="#sec-story">故事文本</a>
+      </nav>
+
+      <main class="content">
+
+        <section id="sec-goal" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲目標</h2>
+              <p class="section-desc">玩家的勝利條件依其所持有的［身份牌］而定</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>老約翰（擇一達成即可）
+              <ul>
+                <li>所有教會和老約翰所持有的【福音】書信總數大於等於 2n 封（n 為遊戲開始時的教會數量）。</li>
+                <li>消滅所有羅馬帝國玩家。</li>
+              </ul>
+            </li>
+            <li>七教會（與老約翰共同勝利）
+              <ul>
+                <li>不惜一切代價保護老約翰，並協助達成其勝利條件。</li>
+              </ul>
+            </li>
+            <li>羅馬帝國（擇一達成即可）
+              <ul>
+                <li>在老約翰和教會達成勝利條件前，殺死老約翰，以鞏固政權。</li>
+                <li>誘導老約翰發起驗證並使驗證失敗（詳看獲勝條件）。</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec-components" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲配件</h2>
+              <p class="section-desc">四個種類，共 126 張牌</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <div class="media">
+              <div class="media-grid">
+                <div class="media-item">
+                  <img src="Image/Cover.webp" alt="PictureNotFound">
+                  <span class="caption">身分牌背面</span>
+                </div>
+                <div class="media-item">
+                  <img src="Image/Blood.PNG" alt="PictureNotFound">
+                  <span class="caption">生命值牌</span>
+                </div>
+                <div class="media-item">
+                  <img src="Image/BloodBack.PNG" alt="PictureNotFound">
+                  <span class="caption">生命值牌背</span>
+                </div>
+                <div class="media-item">
+                  <img src="Image/Game.PNG" alt="PictureNotFound">
+                  <span class="caption">遊戲牌/特殊牌背</span>
+                </div>
+              </div>
+            </div>
+            <li>14張〔身份牌］
+              <ul>
+                <li>老約翰 x 1</li>
+                <li>教會 x 7
+                  <ul>
+                    <li>以弗所特殊技能－－愛心：回合開始前，可選擇回復自己一點生命值，或損失自己一點生命值並回復任一玩家一點生命值。</li>
+                    <li>士每拿特殊技能－－受苦：若有人被損失生命值時，可決定是否代替對方損失生命值（上限為當前生命值）。</li>
+                    <li>別迦摩特殊技能－－真理：約翰宣布驗證時，此［特殊牌］視為 2 張收下的【福音】書信。</li>
+                    <li>推雅推喇特殊技能－－聖潔：手牌數上限不受生命值限制。</li>
+                    <li>撒狄特殊技能－－實在：回合開始前，抽取任一玩家的一張手牌，變成自己的手牌。</li>
+                    <li>非拉鐵非特殊技能－－見證：每次回合開始前，觀看牌堆頂X張牌（X為存活玩家數且不超過 5），可調整牌序並重新至於牌頂。</li>
+                    <li>老底嘉特殊技能－－委身：若狀態為<strong>興旺</strong>，每輪「抽遊戲牌」階段，可抽 4 張［遊戲牌］，若為<strong>冷清</strong>，則為 1 張。</li>
+                  </ul>
+                </li>
+                <li>羅馬帝國 x 6
+                  <ul>
+                    <li>特殊技能：可在任意時候翻開［身分牌］，立即回滿 7 點生命值；若在回合開始前收到【放逐】書信，也可藉由翻開［身分牌］解除【放逐】效果，並在「抽遊戲牌」階段額外抽取兩張遊戲牌，繼續該回合。</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>14張〔生命值牌］：共7點生命值
+              <ul>
+                <li>以［身分牌］蓋住玩家當前損失的生命值量。</li>
+                <li>透過［身分牌］與〔生命值牌］的擺放方式顯示玩家的狀態：平行擺放代表<strong>冷清</strong>，垂直擺放代表為<strong>興旺</strong>。</li>
+              </ul>
+              <div class="media">
+                <div class="media-grid">
+                  <div class="media-item">
+                    <img src="Image/Deserted.PNG" alt="PictureNotFound">
+                    <span class="caption"><strong>冷清</strong>狀態、3點生命值</span>
+                  </div>
+                  <div class="media-item">
+                    <img src="Image/Thriving.PNG" alt="PictureNotFound">
+                    <span class="caption"><strong>興旺</strong>狀態、5點生命值</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>91張〔遊戲牌］
+              <ul>
+                <li>每張同時具有〔行動牌〕效果和〔書信牌〕效果，依使用時機對應不同功能。</li>
+              </ul>
+            </li>
+            <li>7張〔特殊牌］（七教會專用）
+              <ul>
+                <li>當玩家獲得並使用與自己對應的〔特殊牌］時，需將［身分牌］翻開，並將〔特殊牌］放置在［身分牌］旁邊。使用特殊牌後，玩家於往後每回合皆可使用［身分牌］的技能。</li>
+                <li>七教會各自對應一張專屬的［特殊牌］，列表如下：
+                  <ul>
+                    <li>以弗所（徐恩行）：燈臺</li>
+                    <li>士每拿（沈以安）：冠冕</li>
+                    <li>別迦摩（王子恩）：白石</li>
+                    <li>推雅推拉（劉祥玲）：晨星</li>
+                    <li>撒狄（葉景行）：白衣</li>
+                    <li>非拉鐵非（魏渝昭）：柱子</li>
+                    <li>老底嘉（許瑞甯）：眼藥</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec-players" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲人數</h2>
+              <p class="section-desc">參照下表，抽取等同於玩家人數的〔身份牌〕（建議7-14人）</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>玩家數</th>
+                  <th>老約翰</th>
+                  <th>七教會</th>
+                  <th>羅馬帝國</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>3 (強烈不建議)</td><td>1</td><td>1</td><td>1</td></tr>
+                <tr><td>4 (不建議)</td><td>1</td><td>1</td><td>2</td></tr>
+                <tr><td>5 (不建議)</td><td>1</td><td>2</td><td>2</td></tr>
+                <tr><td>6 (不建議)</td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td>7</td><td>1</td><td>3</td><td>3</td></tr>
+                <tr><td>8</td><td>1</td><td>4</td><td>3</td></tr>
+                <tr><td>9</td><td>1</td><td>4</td><td>4</td></tr>
+                <tr><td>10</td><td>1</td><td>5</td><td>4</td></tr>
+                <tr><td>11</td><td>1</td><td>5</td><td>5</td></tr>
+                <tr><td>12</td><td>1</td><td>6</td><td>5</td></tr>
+                <tr><td>13</td><td>1</td><td>6</td><td>6</td></tr>
+                <tr><td>14</td><td>1</td><td>7</td><td>6</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="sec-setup" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲開始前準備</h2>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>將未使用的教會［特殊牌］移除。</li>
+            <li>抽取〔身分牌〕，並根據身分，掃描並閱讀說明書上對應〔身分牌〕的故事文本。</li>
+            <li>每位玩家抽 5 張〔遊戲牌〕作為起始手牌。</li>
+            <li>每位教會與羅馬帝國的起始狀態為<strong>冷清</strong>，生命值為 5；老約翰為<strong>冷清</strong>，生命值為 7。</li>
+          </ul>
+        </section>
+
+        <section id="sec-progress" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲進行時</h2>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>進行遊戲時，由老約翰開始，按逆時針方向以回合的方式進行。</li>
+            <li>即：每名玩家有一個自己的回合，一名玩家回合結束後，右邊玩家的回合開始，依次輪流進行。</li>
+          </ul>
+        </section>
+
+        <section id="sec-flow" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">回合流程（共五個階段）</h2>
+              <p class="section-desc">
+                1. 抽遊戲牌<br>
+                2. 彼此交通<br>
+                3. 出行動牌<br>
+                4. 寄信中<br>
+                5. 回合結束<br>
+              </p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets" style="padding-left: 22px;">
+            <li>遊戲階段1/5：抽遊戲牌
+              <ul>
+                <li>如果抽牌堆沒牌，出牌牌堆立刻重新洗牌成為新的抽牌堆。</li>
+              </ul>
+            </li>
+            <li>遊戲階段2/5：彼此交通
+              <ul>
+                <li>依狀態決定交通次數。
+                  <ul>
+                    <li><strong>興旺</strong>：可交通 2 次</li>
+                    <li><strong>冷清</strong>：可交通 1 次</li>
+                  </ul>
+                </li>
+                <li>交通方式：該回合玩家指定任一玩家，從對方手牌中隨機抽一張牌，並交出自己選擇的一張手牌作為交換（可與同一玩家重複）。</li>
+              </ul>
+            </li>
+            <li>遊戲階段3/5：出行動牌
+              <ul>
+                <li>玩家可以視情況出的〔行動牌〕或〔特殊牌〕，數量不限。</li>
+                <li>〔行動牌〕使用完後放置到出牌堆。</li>
+                <li>〔行動牌〕共 9 類：</li>
+                <ul>
+                  <li>【差派天使】：使任一玩家的狀態提升至<strong>興旺</strong>。</li>
+                  <li>【鑒察人心】：詢問任一玩家身分（回應方式依遊戲牌上的描述），被鑒察人心的玩家將此牌納入手牌中。不可對約翰使用，約翰不可用於其他玩家。</li>
+                    <ul>
+                      <li>
+                        如果你是<br>
+                        羅馬帝國：回答「我會繳稅給凱撒。」<br>
+                        教會：回答「願你平安。」
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        如果你是<br>
+                        羅馬帝國：回答「願你平安。」<br>
+                        教會：回答「我會繳稅給凱撒。」
+                      </li>
+                    </ul>
+                  <li>【威脅】：使任一玩家的狀態降至<strong>冷清</strong>。</li>
+                  <li>【挖角】：使任一玩家的狀態降至<strong>冷清</strong>，且自己的狀態提升至<strong>興旺</strong>。</li>
+                  <li>【逼迫】：使任一玩家失去 1 點生命值。</li>
+                  <li>【無花果】：使任一玩家回復 1 點生命值。</li>
+                  <li>【羊羔的婚宴】：所有玩家抽 1 張手牌，自己抽 2 張手牌。</li>
+                  <li>【吞吃】：從任一位玩家手牌中抽取 2 張手牌。</li>
+                  <li>【你應當悔改】：可在任何時機使用，取消一張［行動牌］的效果（不含［特殊牌］）。</li>
+                </ul>
+                <li>〔特殊牌〕共7張，代表七間教會：</li>
+                <ul>
+                  <li>只有該〔特殊牌〕對應的教會可以使用，使用後將〔身分牌］翻開，並將〔特殊牌〕放置在〔身分牌］旁邊。往後回合皆可使用［身分牌］的技能。</li>
+                </ul>
+              </ul>
+            </li>
+            <li>遊戲階段4/5：寄書信中（寄信規則）
+              <ul>
+                <li>玩家須盡量寄出1張〔書信牌〕，若玩家在此階段無法寄出任何〔書信牌〕，則立即損失2點生命值。若生命值因此而降至 0 以下（包含 0），則進入瀕死狀態（詳見角色死亡規則）。</li>
+                <li>寄出後，書信以牌背朝上的方式，依序傳遞給左手邊的玩家（順時針方向，與回合輪轉方向相反），過程中不得翻開〔書信牌〕（除非使用【容我先細查】）。</li>
+                <li>若〔書信牌〕完整傳遞一圈後，仍無人收信，則寄出玩家必須自行接收該〔書信牌〕。</li>
+                <li>當〔書信牌〕傳遞到某位玩家面前時，其可選擇是否接收該〔書信牌〕；在確定接收該〔書信牌〕前，應確認是否有其他玩家欲使用【趕出會堂】或【請差遣我】。若決定接收該〔書信牌〕，則將〔書信牌〕翻開，並放置於自己面前。</li>
+                <li>若狀態為<strong>興旺</strong>則可選擇是否再次寄信，傳遞方向與第一次寄信相反（傳遞給右手邊的玩家，逆時針方向，與回合輪轉方向相同），其餘規則相同。</li>
+                <li>〔書信牌〕共 4 類：</li>
+                  <ul>
+                    <li>【福音】：攸關勝敗及其他事。</li>
+                    <li>【試煉】：收到此書信的玩家，若自取得該書信起，至下一次自己回合開始前，均未損失生命值，可在「抽遊戲牌」階段額外抽取 1 張〔遊戲牌］，並將此〔書信牌〕移至出牌堆；若此期間有任一玩家對其造成傷害，則攻擊者可立即抽取 1 張手牌，同時此〔書信牌〕移至出牌堆。</li>
+                    <li>【追殺】：收到此書信的玩家，立即損失 2 點生命值。</li>
+                    <li>【放逐】：收到此書信的玩家，跳過一回合（羅馬帝國可以選擇使用技能抵銷【放逐】效果並抽 2 張手牌開始其回合）。</li>
+                  </ul>
+              </ul>
+            </li>
+            <li>遊戲階段4/5：寄信中（行動）
+              <ul>
+                <li>該回合玩家寄出書信後，所有玩家皆可在此階段打出書信［行動牌］。</li>
+                <li>書信［行動牌］共 4 類：</li>
+                  <ul>
+                    <li>【趕出會堂】：使原本將要收信的玩家無法收信，書信繼續傳遞至下一位玩家。</li>
+                    <li>【請簽收】：迫使書信傳遞到的玩家必須收下該信件（僅寄信者可使用）。</li>
+                    <li>【請差遣我】：當書信將被接收時，可改由使用此牌者收下該書信（不可用於已被【請簽收】指定的情況）。</li>
+                    <li>【容我先細查】：可查看傳遞到自己面前的書信（僅限自己查看，不視為收信）。</li>
+                  </ul>
+              </ul>
+            </li>
+            <li>遊戲階段5/5：回合結束（檢查手牌是否超出上限）
+              <ul>
+                <li>檢查手牌數是否超出當前的生命值（手牌上限等於當前生命值）。若超出，則依超出張數，棄置等量的手牌。</li>
+                <li>棄牌方式：從棄牌者開始，將手牌以牌背朝上的方式，依序傳遞給左手邊的玩家（順時針方向，與回合輪轉方向相反），每位玩家各接收一張，直到需棄牌的數量全部分配完畢。</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec-died" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">角色死亡</h2>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>當角色的生命值降至 0 或更低時，該角色進入瀕死狀態。在此狀態下，尚未翻開〔身分牌］的玩家，不可翻開〔身分牌］。該玩家本人或其他玩家可使用【無花果】回復生命值，若生命值回復至 1 以上（包含 1），該角色即可繼續遊戲，否則視為死亡。</li>
+            <li>角色死亡後，需翻開〔身分牌］。並依其陣營執行以下處理方式：</li>
+              <ul>
+                <li>身分為教會：該角色的手牌全部置入出牌堆。</li>
+                <li>身分為羅馬帝國：若死亡原因是因他人造成（寄信或逼迫造成傷害並使其生命值歸零且無人救助），則造成死亡者可獲得其所有手牌。若為死亡原因非他人造成，該角色的手牌全部置入出牌堆。</li>
+              </ul>
+            <li>若老約翰擊殺（寄信或逼迫造成傷害並使其生命值歸零且無人救助）任一間教會，則老約翰必須立即棄掉自己所有的手牌。並按棄牌方式（詳見「回合結束」規則）完成棄牌流程。</li>
+          </ul>
+        </section>
+
+        <section id="sec-end" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲結束</h2>
+              <p class="section-desc">當以下任意一種情況發生時，遊戲立即結束</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>老約翰死亡：羅馬帝國獲勝。</li>
+            <li>福音達成：在老約翰存活的狀態下，老約翰可發起驗證。若所有教會和老約翰所持有的【福音】書信總數大於等於 2n 封（n 為遊戲開始時的教會數量），則視為驗證成功，老約翰和教會（無論是否存活）共同獲勝。若驗證失敗，則羅馬帝國獲勝。</li>
+            <li>羅馬帝國滅亡：當所有羅馬帝國身份皆死亡時，老約翰與教會（無論是否存活）共同獲勝。</li>
+            <li>國教化：若場上所有仍存活的玩家都收到至少2封【福音】書信，任一玩家即可宣布進入「基督教國教化時代」；此時，收到最多【福音】書信者（可複數）獲勝。</li>
+          </ul>
+        </section>
+
+        <section id="sec-story" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">故事文本</h2>
+              <p class="section-desc">遊戲結束後，建議玩家可以讀<a href="./Content.html" target="_blank">故事文本</a></p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li><a href="./Roman.html" target="_blank">羅馬帝國</a></li>
+            <li><a href="./John.html" target="_blank">老約翰</a></li>
+            <li><a href="./Ephesus.html" target="_blank">以弗所</a></li>
+            <li><a href="./Smyrna.html" target="_blank">士每拿</a></li>
+            <li><a href="./Pergamum.html" target="_blank">別迦摩</a></li>
+            <li><a href="./Thyatira.html" target="_blank">推雅推喇</a></li>
+            <li><a href="./Sardis.html" target="_blank">撒狄</a></li>
+            <li><a href="./Philadelphia.html" target="_blank">非拉鐵非</a></li>
+            <li><a href="./Laodicea.html" target="_blank">老底嘉</a></li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="cc">
+      <a href="https://www.instagram.com/taipeisia/" target="_blank"><strong>飛躍青年傳愛中心</strong></a>
+    </div>
+    <div class="cc">
+      Licensed under
+      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
+    </div>
+  </div>
+</body>
+
+<script src="./mainRule.js" defer></script>
+
+</html>

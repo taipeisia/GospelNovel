@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link href="./styleRule.css" rel="stylesheet" type="text/css">
+
+	<title>74.7 Overcomers 晚禱遊戲規則</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1 class="title">74.7 Overcomers－啟示錄7教會</h1>
+      <p class="subtitle">卡牌晚禱遊戲規則（建議人數：7–14）</p>
+      <div class="meta">
+        桌遊設計團隊<br>
+        文本：岑明雲、劉景明、鄭伊珊<br>
+        繪圖：王佳宣、孫祐予<br>
+        遊戲設計：王示恩、岑明雲<br>
+        企劃：林月娥<br>
+        版權所屬：北區飛躍青年傳愛中心<br>
+        桌遊名稱： 74.7 Overcomers－啟示錄7教會<br>
+        出版時間：2026北中門
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="toc" aria-label="目錄">
+        <h3>目錄</h3>
+        <a href="#sec-components">遊戲配件</a>
+        <a href="#sec-setup">遊戲開始前準備</a>
+        <a href="#sec-players">玩家角色分工與限制</a>
+        <a href="#sec-flow">每一輪遊戲流程</a>
+        <a href="#sec-score">分數結算方式</a>
+        <a href="#sec-discuss">遊戲結束後小組分享題目</a>
+        <a href="#sec-story">故事文本</a>
+      </nav>
+
+      <main class="content">
+
+        <section id="sec-components" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲配件</h2>
+              <p class="section-desc">本遊戲共使用 126 張牌，實際遊戲中會使用以下配件</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>14張〔身份牌］
+              <ul>
+                <li>老約翰 x 1（不使用）</li>
+                <li>教會 x 7（使用）</li>
+                <li>羅馬帝國 x 6（不使用）</li>
+              </ul>
+            </li>
+            <li>14張〔生命值牌］：（不使用）</li>
+            <li>91張〔遊戲牌］：僅使用「書信種類（底色）」效果
+              <ul>
+                <li>【福音】：莫蘭迪黃色</li>
+                <li>【試煉】：莫蘭迪綠色</li>
+                <li>【追殺】：莫蘭迪紅色</li>
+                <li>【放逐】：莫蘭迪藍色</li>
+              </ul>
+            </li>
+            <li>7張〔特殊牌］（七教會專用）
+              <ul>
+                <li>七教會各自對應一張專屬的［特殊牌］，列表如下：
+                  <ul>
+                    <li>以弗所（徐恩行）：燈臺</li>
+                    <li>士每拿（沈以安）：冠冕</li>
+                    <li>別迦摩（王子恩）：白石</li>
+                    <li>推雅推拉（劉祥玲）：晨星</li>
+                    <li>撒狄（葉景行）：白衣</li>
+                    <li>非拉鐵非（魏渝昭）：柱子</li>
+                    <li>老底嘉（許瑞甯）：眼藥</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec-setup" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲開始前準備</h2>
+              <p class="section-desc">牌陣設置方式</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>將 91 張遊戲牌 + 7 張特殊牌 混洗，將牌 排成 7 排 × 14 張 的矩陣。</li>
+            <li>每一牌代表一間教會，排列順序如下（由上到下）：</li>
+            <li>在每一排最左側額外放置一張對應的教會身份牌並翻開，作為該排教會的標示。教會身份牌不屬於遊戲牌，不會被翻動、交換或計入任何效果。</li>
+            <li>身份牌右側依序放置 14 張遊戲牌，全部蓋著，作為該輪可操作的牌。<br>遊戲共進行 7 輪，每一輪對應其中一排，僅處理該排的 14 張遊戲牌。</li>
+            <li>視覺化示意如下：</li>
+            <div class="media">
+              <div class="media-grid" style="grid-template-columns: repeat(1, 1fr);">
+                <div class="media-item">
+                  <img src="Image/Array.PNG" alt="PictureNotFound">
+                  <span class="caption">牌陣設置方式</span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </section>
+
+        <section id="sec-players" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">玩家角色分工與限制</h2>
+              <p class="section-desc">由小組輔導分配</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>在規則說明完成後、遊戲正式開始前分配。</li>
+            <li>玩家限制與能力一覽表：</li>
+          </ul>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>送信者人數</th>
+                  <th>能力</th>
+                  <th>限制</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>每輪可查看第 1、4、7、10、13 張牌</td><td>禁止說話（<strong>戴口罩</strong>）</td></tr>
+                <tr><td>1</td><td>每輪可查看第 2、5、8、11、14 張牌</td><td>禁止說話（<strong>戴口罩</strong>）</td></tr>
+                <tr><td>1</td><td>可翻開位置 1–7 的牌</td><td>禁止睜眼（<strong>戴口罩</strong>）</td></tr>
+                <tr><td>1</td><td>可翻開位置 8–14 的牌</td><td>禁止睜眼（<strong>戴口罩</strong>）</td></tr>
+                <tr><td>2</td><td>可任意交換「尚未翻開」的牌位置（唯一可跨排行動的角色）</td><td>禁止說話（<strong>戴口罩</strong>）</td></tr>
+                <tr><td>其他</td><td>溝通、引導、策略協調</td><td>禁止觸碰遊戲牌</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="bullets">
+            <li>所有限制全程有效。</li>
+            <li>除換牌者外，所有玩家的查看與翻牌行為，皆只能在當前回合的那一排進行。</li>
+          </ul>
+        </section>
+
+        <section id="sec-flow" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">每一輪遊戲流程</h2>
+              <p class="section-desc">共 7 輪</p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>每一輪限時 5 分鐘
+              <ul>
+                <li>由輔導計時</li>
+                <li>時間到即進入結算，不可再翻牌</li>
+                <li>依序完成七回合</li>
+              </ul>
+            </li>
+            <li>翻牌規則
+              <ul>
+                <li>每一輪最多可翻開 7 張牌</li>
+                <li>僅計算翻開的牌（未翻開不影響）</li>
+                <li>翻到「對應教會的特殊牌」，視為成功送信</li>
+              </ul>
+            </li>
+            <li>書信牌效果說明
+              <ul>
+                <li>試煉（綠）</li>
+                  <ul>
+                    <li>可選擇是否計入 7 張限制</li>
+                    <li>結算時，每張試煉使總分 × 1.2</li>
+                  </ul>
+                <li>放逐（藍）</li>
+                  <ul>
+                    <li>立刻結束本輪</li>
+                    <li>結算時，總分 × 1.5</li>
+                  </ul>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec-score" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">分數結算方式</h2>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li>
+              情況一：翻到該教會的「特殊牌」 → 視為成功寄送書信。得分公式：<br>
+              （20 + 10 x 翻開的追殺數量 + 10 x 翻開的福音數量）x 1.2<sup>翻開的試煉數</sup> x 1.5<sup>翻開的放逐數</sup>
+            </li>
+            <li>情況二：未翻到特殊牌 → 比較福音與追殺
+              <ul>
+                <li>
+                  福音數 ≧ 追殺數（寄送成功）。得分公式：<br>
+                  （20 + 5 x 翻開的追殺數量 + 5 x 翻開的福音數量）x 1.2<sup>翻開的試煉數</sup> x 1.5<sup>翻開的放逐數</sup>
+                </li>
+                <li>
+                  追殺數 > 福音數（寄送失敗）。得分公式：<br>
+                  （-40 + 5 x 翻開的福音數量）x 1.2<sup>翻開的試煉數</sup> x 1.5<sup>翻開的放逐數</sup>
+                </li>
+              </ul>
+            </li>
+            <li><a href="./Calculator.html" target="_blank">簡易計分表連結</a></li>
+          </ul>
+        </section>
+
+        <section id="sec-discuss" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">遊戲結束後小組分享題目</h2>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ol class="bullets">
+            <li>在幫助約翰送信的過程中，你受到那些限制？當時的感受為何？</li>
+            <li>當大家必須彼此配合、分工合作時，你的心情有什麼改變？</li>
+            <li>找出這七間教會對應的特殊牌，反映了他們的哪些屬靈光景與特質？</li>
+            <li>從今天一整天的活動中，你覺得老約翰送信的心意為何？</li>
+          </ol>
+        </section>
+
+        <section id="sec-story" class="card js-section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">故事文本</h2>
+              <p class="section-desc">遊戲結束後，建議玩家可以讀<a href="./Content.html" target="_blank">故事文本</a></p>
+            </div>
+            <button class="toggle-btn js-toggle" type="button">展開/收合</button>
+          </div>
+
+          <ul class="bullets">
+            <li><a href="./Roman.html" target="_blank">羅馬帝國</a></li>
+            <li><a href="./John.html" target="_blank">老約翰</a></li>
+            <li><a href="./Ephesus.html" target="_blank">以弗所</a></li>
+            <li><a href="./Smyrna.html" target="_blank">士每拿</a></li>
+            <li><a href="./Pergamum.html" target="_blank">別迦摩</a></li>
+            <li><a href="./Thyatira.html" target="_blank">推雅推喇</a></li>
+            <li><a href="./Sardis.html" target="_blank">撒狄</a></li>
+            <li><a href="./Philadelphia.html" target="_blank">非拉鐵非</a></li>
+            <li><a href="./Laodicea.html" target="_blank">老底嘉</a></li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="cc">
+      <a href="https://www.instagram.com/taipeisia/" target="_blank"><strong>飛躍青年傳愛中心</strong></a>
+    </div>
+    <div class="cc">
+      Licensed under
+      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1">
+        <img style="height:15px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
+    </div>
+  </div>
+</body>
+
+<script src="./mainRule.js" defer></script>
+
+</html>
