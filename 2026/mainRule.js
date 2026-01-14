@@ -2,7 +2,6 @@ document.querySelectorAll('.js-section').forEach(section => {
   const btn = section.querySelector('.js-toggle');
   if (!btn) return;
 
-  // 預設全部展開；你也可以把下面這行改成 true 讓它預設收合
   const defaultCollapsed = false;
 
   const contentNodes = Array.from(section.children).filter(el => !el.classList.contains('section-header'));
