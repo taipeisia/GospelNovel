@@ -1,4 +1,3 @@
-// ====== 設定：七教會資料 ======
 const CHURCHES = [
   { key: "ephesus",      name: "以弗所",     special: "燈臺" },
   { key: "smyrna",       name: "士每拿",     special: "冠冕" },
@@ -11,18 +10,12 @@ const CHURCHES = [
 
 const STORAGE_KEY = "overcomers_score";
 
-// ====== 工具函數 ======
 function toNonNegInt(v){
   const n = Math.floor(Number(v));
   if (!Number.isFinite(n) || n < 0) return 0;
   return n;
 }
 
-/**
- * - resultLabel: "寄送成功" / "寄送失敗"
- * - base: 基礎分
- * - score: 乘上倍率後的分數（四捨五入到整數）
- */
 function calcOutcome({hasSpecial, gospel, chase, trial, exile}){
   let base;
   let resultLabel;
@@ -31,7 +24,6 @@ function calcOutcome({hasSpecial, gospel, chase, trial, exile}){
     resultLabel = "寄送成功";
     base = 20 + 10 * chase + 10 * gospel;
   } else {
-    // 你指定：等於也算成功
     if (gospel >= chase){
       resultLabel = "寄送成功";
       base = 20 + 5 * chase + 5 * gospel;
@@ -70,7 +62,6 @@ function defaultRowState(){
   return { hasSpecial:false, gospel:0, chase:0, trial:0, exile:0, resultLabel:"—", score:0 };
 }
 
-// ====== UI 建立 ======
 const tbody = document.getElementById("rows");
 let state = loadState();
 
@@ -164,7 +155,6 @@ function bindRowEvents(){
   trs.forEach(tr => {
     const key = tr.dataset.key;
 
-    // 即時存檔
     const inputs = tr.querySelectorAll("input");
     inputs.forEach(inp => {
       const handler = () => {
@@ -187,7 +177,6 @@ function bindRowEvents(){
   });
 }
 
-// 全部結算
 document.getElementById("btnCalcAll").addEventListener("click", () => {
   const trs = tbody.querySelectorAll("tr");
   trs.forEach(tr => {
@@ -200,7 +189,6 @@ document.getElementById("btnCalcAll").addEventListener("click", () => {
   updateTotal();
 });
 
-// 清除全部
 document.getElementById("btnClear").addEventListener("click", () => {
   state = {};
   for (const c of CHURCHES) state[c.key] = defaultRowState();
