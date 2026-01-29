@@ -51,11 +51,7 @@ function loadState(){
 
 function saveState(state){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  document.getElementById("saveState").textContent = "已自動保存";
-  setTimeout(() => {
-    const el = document.getElementById("saveState");
-    if (el) el.textContent = "已讀取儲存資料";
-  }, 900);
+  setTimeout(900);
 }
 
 function defaultRowState(){
@@ -143,6 +139,7 @@ function writeRowOutputs(tr, resultLabel, score){
 }
 
 function updateTotal(){
+  console.log("146");
   let total = 0;
   for (const c of CHURCHES){
     total += Number(state[c.key]?.score ?? 0);
@@ -194,7 +191,6 @@ document.getElementById("btnClear").addEventListener("click", () => {
   for (const c of CHURCHES) state[c.key] = defaultRowState();
   localStorage.removeItem(STORAGE_KEY);
   render();
-  document.getElementById("saveState").textContent = "已清除";
   updateTotal();
 });
 
